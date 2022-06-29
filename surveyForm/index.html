@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donald Vu Feedback</title>
+    <link rel="stylesheet" href="/surveyForm/styles.css" />
   </head>
   <body>
     <h1 id="title">Donald Vu Feedback Form</h1>
@@ -12,20 +13,77 @@
       Thank you for taking the time to provide feedback for an inspiring
       developer!
     </p>
-    <form id="feedback-form">
+    <form id="survey-form">
       <fieldset>
-        <label id="name-label">Name: <input type="text" id="name" name="name" required placeholder="First and Last name"/></label>
-        <label id="email-label">Email: <input type="email" id="email" name="email" required placeholder="Email"></label>
-        <label id="number-label">Age: <input type="number" name="number" id="number" pattern="[0-9]" placeholder="How old are you?"></label>
-    </fieldset>
-    <fieldset>
+        <label id="name-label"
+          >Name
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your name"
+        /></label>
+        <label id="email-label"
+          >Email
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Enter your Email"
+        /></label>
+        <label id="number-label"
+          >Age (optional)
+          <input
+            type="number"
+            name="number"
+            id="number"
+            pattern="[0-9]"
+            min="1"
+            max="120"
+            placeholder="Age"
+        /></label>
+      </fieldset>
+      <fieldset>
+        <label name="dropdown"
+          >Which option best describes your relationship with Donald?</label
+        >
         <select name="" id="dropdown">
-            <option value=""></option>
-            <option value=""></option>
+          <option value="">Select relationship</option>
+          <option value="friend">Friend</option>
+          <option value="family">Family</option>
+          <option value="co-worker">Co-worker</option>
+          <option value="manager">Manager</option>
+          <option value="recruiter">Recruiter</option>
+          <option value="interviewer">Interviewer</option>
+          <option value="other">Other</option>
         </select>
-        <input type="radio" name="" id="">
-        <input type="radio" name="" id="">
-    </fieldset>
+        <label for="">Would you reccomend Donald to your Team?</label>
+        <input type="radio" name="yes-no" value="yes" /> Yes
+        <input type="radio" name="yes-no" value="no"/> No
+      </fieldset>
+      <fieldset>
+        <label for="">What areas would you like to see improvement on?</label>
+        <input type="checkbox" name="" id="" value="html"/> HTML
+        <input type="checkbox" name="" id="" value="css"/> CSS
+        <input type="checkbox" name="" id="" value="javascript"/> Javascript
+        <input type="checkbox" name="" id="" value="github"/> Github
+        <input type="checkbox" name="" id="" value="more projects"/> More projects
+        <input type="checkbox" name="" id="" value="resume"/> Resume
+        <input type="checkbox" name="" id="" value="communication"/> Communication
+      </fieldset>
+      <fieldset>
+        <label for="">Any comments or suggestions?</label>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="3"
+          placeholder="Enter your comment here..."
+        ></textarea>
+      </fieldset>
+      <input type="submit" value="Submit">
     </form>
   </body>
 </html>
